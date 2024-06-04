@@ -39,7 +39,7 @@ const Profile = () => {
   }, [id, token]);
 
   return (
-    <div className='bg-zinc-900 md:px-12 h-screen px-2 flex md:flex-row flex-col w-full py-8 gap-4 text-white overflow-y-auto  '>
+    <div className='bg-zinc-900 md:px-12 h-screen px-2 flex md:flex-row flex-col w-full py-8 gap-4 text-white overflow-y-auto pt-20 '>
   {profile &&
     <>
       <div className='w-full md:w-1/6 md:h-full h-auto'>
