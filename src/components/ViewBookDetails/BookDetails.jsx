@@ -124,7 +124,7 @@ const BookDetails = () => {
     return (
         <>
             {data && (
-                <div className='min-h-screen flex flex-col'>
+                <div className='min-h-screen flex flex-col pt-16'>
                 <div className='flex-grow px-4 md:px-8 lg:px-12 py-8 bg-zinc-900 flex flex-col lg:flex-row'>
                     <div className='bg-zinc-800  p-16 rounded px-4 py-12 w-full lg:w-1/2 flex flex-col items-center justify-center'>
                         <div className='flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 w-full'>
