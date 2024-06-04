@@ -31,7 +31,7 @@ const Favorites = () => {
   
 
   const getGridCols = () => {
-    if (favBooks.length === 1) return 'grid-cols-2 p-4';
+    if (favBooks.length === 1) return 'grid-cols-1 p-4';
     if (favBooks.length === 2) return 'grid-cols-1 sm:grid-cols-2';
     return 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4';
   };
