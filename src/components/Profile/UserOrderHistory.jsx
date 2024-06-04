@@ -53,7 +53,7 @@ const UserOrderHistory = () => {
           </div>
           {orderHistory.map((order, idx) => (
             <div key={idx} className='mt-4 bg-zinc-800 w-full rounded py-2 px-4 flex flex-col md:flex-row gap-2 md:gap-4 hover:bg-zinc-900 hover:border-2'>
-              <div className='w-full md:w-[5%]'><h2 className='text-center'>{idx + 1}</h2></div>
+              <div className='w-full md:w-[5%]'><h2 className='text-center'>order - {idx + 1}</h2></div>
               <div className='w-full md:w-[25%]'>
                 {order.book ? (
                   <Link to={`/view-book-details/${order.book._id}`} className='hover:text-blue-300'>
