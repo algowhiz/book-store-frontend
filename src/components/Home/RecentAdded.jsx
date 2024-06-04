@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import BookCard from '../Bookcard/BookCard';
+import Shimmer from '../Utils/Shimmer'
 
 const RecentAdded = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true); // State to manage loading
 
   useEffect(() => {
     const fetch = async () => {
@@ -12,19 +14,26 @@ const RecentAdded = () => {
         setData(response.data.data || []); 
       } catch (error) {
         console.error('Error fetching recent books:', error);
+      } finally {
+        setLoading(false); // Set loading to false after data is fetched
       }
     };
 
     fetch();
   }, []);
 
-  
-
   return (
     <div className='text-white mt-8 px-4'>
       <h4 className='text-3xl text-yellow-100'>Recent Added books</h4>
       <div className='my-8 grid md:grid-cols-3 gap-8 sm:grid-cols-3 grid-cols-1'>
-        {data.length > 0 ? (
+        {loading ? (
+          // Display shimmer placeholders while loading
+          [...Array(6)].map((_, idx) => (
+            <div key={idx}>
+              <Shimmer />
+            </div>
+          ))
+        ) : data.length > 0 ? (
           data.map((it, idx) => (
             <div key={idx}>
               <BookCard it={it} />
