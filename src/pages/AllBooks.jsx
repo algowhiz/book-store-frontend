@@ -29,7 +29,7 @@ const AllBooks = () => {
   }
 
   return (
-    <div className='bg-zinc-900 px-12 py-8 h-90vh'>
+    <div className='bg-zinc-900 px-12 py-8 h-[90vh]'>
       <div className='text-white mt-8 px-4'>
         <h4 className='text-3xl text-yellow-100'>All books</h4>
         <div className='my-8 grid md:grid-cols-3 gap-10 sm:grid-cols-3 grid-cols-1'>
